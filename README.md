@@ -1,3 +1,11 @@
+#Customer-Tracker Front-end!
+need to install npm
+need to install node
+
+npm init react-app customer-tracker-react
+npm install --save react-router-dom
+
+----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
