@@ -2,8 +2,10 @@
 need to install npm
 need to install node
 
+
 npm init react-app customer-tracker-react
 npm install --save react-router-dom
+npm install bootstrap
 
 ----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
