@@ -22,8 +22,13 @@ export default class CustomerList extends React.Component {
         return (
         <div className="customer-list body">
             <h1>
-                hello
+                Customer List
             </h1>
+            <h5>
+                <Link to={"/accounts"}>
+                    List of all Accounts
+                </Link>
+            </h5>
             <table className={"table"}>
                 <thead>
                     <tr>

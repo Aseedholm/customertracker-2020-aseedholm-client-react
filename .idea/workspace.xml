@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d60321-5c14-4bee-bdea-f774dad9987c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/RouterManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/account/list/AccountList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/list/CustomerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/RouterManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/RouterManager.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -71,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598396047838</updated>
-      <workItem from="1598396049095" duration="8310000" />
+      <workItem from="1598396049095" duration="10825000" />
     </task>
     <servers />
   </component>
