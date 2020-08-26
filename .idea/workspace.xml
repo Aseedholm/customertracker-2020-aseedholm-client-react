@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d60321-5c14-4bee-bdea-f774dad9987c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/account/list/AccountList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/AccountServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/CustomerServices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/list/AccountList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/list/AccountList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/customer/list/CustomerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/RouterManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/RouterManager.js" afterDir="false" />
@@ -67,7 +70,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598396047838</updated>
-      <workItem from="1598396049095" duration="10825000" />
+      <workItem from="1598396049095" duration="11117000" />
+      <workItem from="1598412627567" duration="98000" />
+      <workItem from="1598452686475" duration="8569000" />
     </task>
     <servers />
   </component>
@@ -79,7 +84,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -1,7 +1,20 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import AccountServices from "../../service/AccountServices";
 
+
+/**
+ * This class represents a List of all Accounts contained in the server. It displays all the
+ * Accounts by identification number and provides a Link to the Account's profile by clicking on
+ * the Account's identification number.
+ */
 export default class AccountList extends React.Component {
+    /**
+     * This constructor constructs a AccountList object. The constructor also initializes the
+     * state for this component class.
+     *
+     * @param props
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -9,10 +22,12 @@ export default class AccountList extends React.Component {
         };
     }; //end constructor
 
+    /**
+     * ComponentDidMount makes a fetch request when this page is loaded, getting list of all
+     * Accounts from the server.
+     */
     componentDidMount() {
-        fetch(`http://localhost:8080/api/accounts`)
-            .then(response => response.json())
-            // .then(results => console.log(results))
+            AccountServices.findAllAccounts()
             .then(results => this.setState({
                                                accountList: results
                                            }))
