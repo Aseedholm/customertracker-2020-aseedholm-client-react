@@ -1,7 +1,19 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import AccountServices from "../../service/AccountServices";
 
-export default class AccountList extends React.Component {
+/**
+ * This class represents a Account's profile according to data retrieved from the server. This
+ * class is called when a Account's identification number is clicked on and an API request goes to
+ * the server to retrieve the account information according to the account Id.
+ */
+export default class AccountProfile extends React.Component {
+    /**
+     * This constructor constructs a AccountProfile object. The constructor also initializes the
+     * state for this component class.
+     *
+     * @param props
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -10,10 +22,15 @@ export default class AccountList extends React.Component {
         };
     }; //end constructor
 
+    /**
+     * ComponentDidMount makes a fetch request when this page is loaded, getting the Account's
+     * identification number from the URL and then retrieving that Account's information from the
+     * server.
+     */
     componentDidMount() {
         const accountId = this.props.match.params.accountId;
-        fetch(`http://localhost:8080/api/account/${accountId}`)
-            .then(response => response.json())
+
+            AccountServices.findAccountById(accountId)
             .then(results => this.setState({
                                                account: results,
                                                customer: results.customer

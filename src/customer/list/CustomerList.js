@@ -1,8 +1,19 @@
 import React from "react";
 import "./CustomerList.css"
 import {Link} from "react-router-dom";
+import CustomerServices from "../../service/CustomerServices";
 
+/**
+ * This class represents a List of all Customers contained in the server. It displays all the
+ * Customer names and provides a Link to the Customer's profile by clicking on the Customer's name.
+ */
 export default class CustomerList extends React.Component {
+    /**
+     * This constructor constructs a CustomerList object. The constructor also initializes the
+     * state for this component class.
+     *
+     * @param props
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -10,10 +21,12 @@ export default class CustomerList extends React.Component {
         };
     }; //end constructor
 
+    /**
+     * ComponentDidMount makes a fetch request when this page is loaded, getting list of all
+     * Customers from the server.
+     */
     componentDidMount() {
-        fetch(`http://localhost:8080/api/customers`)
-            .then(response => response.json())
-            // .then(results => console.log(results))
+        CustomerServices.findAllCustomers()
             .then(results => this.setState({
                                                customerList: results
                                            }))
@@ -25,6 +38,7 @@ export default class CustomerList extends React.Component {
                 Customer List
             </h1>
             <h5>
+                {/*Link for routing.*/}
                 <Link to={"/accounts"}>
                     List of all Accounts
                 </Link>
@@ -38,6 +52,7 @@ export default class CustomerList extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
+                {/*{this.state.customerList.sort((a, b) => (a.lastName > b.lastName) ? 1: -1)}*/}
                     {this.state.customerList &&
                      this.state.customerList.length > 0 &&
                      this.state.customerList.map(customer =>
