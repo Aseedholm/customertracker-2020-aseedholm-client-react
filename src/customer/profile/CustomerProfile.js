@@ -1,11 +1,13 @@
 import React from "react";
 import "./CustomerProfile.css"
+import {Link} from "react-router-dom";
 
 export default class CustomerProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            customer: {}
+            customer: {},
+            accounts: {}
         };
     }; //end constructor
 
@@ -16,11 +18,19 @@ export default class CustomerProfile extends React.Component {
             .then(results => this.setState({
                                                customer: results
                                            }))
+        fetch(`http://localhost:8080/api/accounts/customer/${customerId}`)
+            .then(response => response.json())
+            .then(results => this.setState({
+                                               accounts: results
+                                           }))
     }
 
     render() {
         return(
             <div>
+                <Link to={"/"}>
+                    To all Customers
+                </Link>
                 <h5>
                     First Name: {this.state.customer.firstName}
                 </h5>
@@ -39,6 +49,35 @@ export default class CustomerProfile extends React.Component {
                 <h5>
                     Email: {this.state.customer.email}
                 </h5>
+                <div className="customer-list body">
+                    <h5>
+                        Account List
+                    </h5>
+                    <table className={"table"}>
+                        <thead>
+                        <tr>
+                            <th>
+                                Account Identification Numbers
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {this.state.accounts &&
+                         this.state.accounts.length > 0 &&
+                         this.state.accounts.map(account =>
+                                                         <tr key={account.id}>
+                                                             <td>
+                                                                 <Link to={`/account/${account.id}`}>
+                                                                     {account.id}
+                                                                 </Link>
+                                                             </td>
+                                                         </tr>
+                         )
+
+                        }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }

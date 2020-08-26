@@ -2,6 +2,8 @@ import React from "react";
 import {BrowserRouter, Route, Link} from "react-router-dom";
 import CustomerList from "../customer/list/CustomerList";
 import CustomerProfile from "../customer/profile/CustomerProfile";
+import AccountList from "../account/list/AccountList";
+import AccountProfile from "../account/profile/AccountProfile";
 
 export default class RouterManager extends React.Component {
     render() {
@@ -17,6 +19,16 @@ export default class RouterManager extends React.Component {
                         path={"/customer/profile/:customerId"}
                         exact={true}
                         component={CustomerProfile}
+                    />
+                    <Route
+                        path={"/accounts"}
+                        exact={true}
+                        component={AccountList}
+                    />
+                    <Route
+                        path={"/account/:accountId"}
+                        exact={true}
+                        component={AccountProfile}
                     />
                 </BrowserRouter>
             </div>
