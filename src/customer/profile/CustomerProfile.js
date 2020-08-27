@@ -53,6 +53,9 @@ export default class CustomerProfile extends React.Component {
                     <Link to={"/"} className="customer-button btn btn-sm">{/*col-3*/}
                         Customers
                     </Link>
+                    <Link to={"/accounts"} className="customer-button btn btn-sm">{/*col-3*/}
+                        Accounts
+                    </Link>
                 </div>
 
                 <div className="row-cols-12 customer-profile">
@@ -100,18 +103,20 @@ export default class CustomerProfile extends React.Component {
                                 <h5>
                                     Reason for joining: {this.state.customer.reason_for_joining
                                                          && this.state.customer.reason_for_joining}
+                                                         {!this.state.customer.reason_for_joining
+                                                          && <h5>None provided</h5>}
                                 </h5>
                             </div>
 
 
                             <div className="col-12 customer-text">
                                 <h5 className="">
-                                    {this.state.active &&
+                                    {this.state.customer.active === "1" &&
                                      <span>
                                         Account is: Active
                                      </span>
                                     }
-                                    {!this.state.active &&
+                                    {this.state.customer.active === "0" &&
                                      <span>
                                         Account is: Inactive
                                     </span>
@@ -120,7 +125,7 @@ export default class CustomerProfile extends React.Component {
                             </div>
                         </div>
 
-                        {this.state.accounts.length > 0 &&
+                        {this.state.accounts && this.state.accounts.length > 0 &&
                          <div className="col-12 customer-text">
 
                              <table className={"table"}>
