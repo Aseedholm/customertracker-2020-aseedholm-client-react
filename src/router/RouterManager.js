@@ -4,6 +4,7 @@ import CustomerList from "../customer/list/CustomerList";
 import CustomerProfile from "../customer/profile/CustomerProfile";
 import AccountList from "../account/list/AccountList";
 import AccountProfile from "../account/profile/AccountProfile";
+
 /**
  * This class represents the navigation for the Customer Tracker web application. Routing is handled
  * by the react-router-dom. It routes to the Customer List, Customer Profile, Account List, and
@@ -11,7 +12,7 @@ import AccountProfile from "../account/profile/AccountProfile";
  */
 export default class RouterManager extends React.Component {
     render() {
-        return(
+        return (
             <div>
                 <BrowserRouter>
                     <Route

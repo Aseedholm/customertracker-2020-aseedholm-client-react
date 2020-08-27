@@ -31,21 +31,22 @@ export default class CustomerList extends React.Component {
                                                customerList: results
                                            }))
     }
+
     render() {
         return (
-        <div>
-            {/*Link for routing.*/}
-            <div className="row">
-            <Link to={"/accounts"} className="account-button btn">
-                Accounts
-            </Link>
-            </div>
-            <div className="customer-list">
-                <h1 className="customer-list-header">
-                    Customers
-                </h1>
-                <table className="table table-bordered table-striped">
-                    <thead>
+            <div>
+                {/*Link for routing.*/}
+                <div className="row">
+                    <Link to={"/accounts"} className="account-button btn">
+                        Accounts
+                    </Link>
+                </div>
+                <div className="customer-list">
+                    <h1 className="customer-list-header">
+                        Customers
+                    </h1>
+                    <table className="table table-bordered table-striped">
+                        <thead>
                         <tr>
                             <th>
                                 Name
@@ -54,31 +55,35 @@ export default class CustomerList extends React.Component {
                                 Identification Number
                             </th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         {this.state.customerList &&
                          this.state.customerList.length > 0 &&
                          this.state.customerList.map(customer =>
-                         <tr key={customer.id}>
-                             <td className="table-column">
+                                                         <tr key={customer.id}>
+                                                             <td className="table-column">
 
-                                 <Link to={`/customer/profile/${customer.id}`} className="table-link btn">
-                                     {customer.firstName} {customer.lastName}
-                                 </Link>
-                             </td>
-                             <td className="table-column">
-                                 <Link to={`/customer/profile/${customer.id}`} className="table-link btn">
-                                     {customer.id}
-                                 </Link>
-                             </td>
-                         </tr>
+                                                                 <Link
+                                                                     to={`/customer/profile/${customer.id}`}
+                                                                     className="table-link btn">
+                                                                     {customer.firstName} {customer.lastName}
+                                                                 </Link>
+                                                             </td>
+                                                             <td className="table-column">
+                                                                 <Link
+                                                                     to={`/customer/profile/${customer.id}`}
+                                                                     className="table-link btn">
+                                                                     {customer.id}
+                                                                 </Link>
+                                                             </td>
+                                                         </tr>
                          )
 
                         }
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
         )
     }
 }

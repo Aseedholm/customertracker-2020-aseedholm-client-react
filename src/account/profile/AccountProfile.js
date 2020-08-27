@@ -31,7 +31,7 @@ export default class AccountProfile extends React.Component {
     componentDidMount() {
         const accountId = this.props.match.params.accountId;
 
-            AccountServices.findAccountById(accountId)
+        AccountServices.findAccountById(accountId)
             .then(results => this.setState({
                                                account: results,
                                                customer: results.customer
@@ -39,7 +39,7 @@ export default class AccountProfile extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <div>
                 <div className="row account-button-column">
                     <Link to={"/accounts"}
@@ -69,7 +69,9 @@ export default class AccountProfile extends React.Component {
                             <h5>
                                 <Link to={`/customer/profile/${this.state.customer.id}`}
                                       className="customer-name-text">
-                                    Customer Name: {this.state.customer.firstName && this.state.customer.firstName} {this.state.customer.lastName && this.state.customer.lastName}
+                                    Customer Name: {this.state.customer.firstName
+                                                    && this.state.customer.firstName} {this.state.customer.lastName
+                                                                                       && this.state.customer.lastName}
                                 </Link>
                             </h5>
                         </div>
@@ -116,9 +118,8 @@ export default class AccountProfile extends React.Component {
                             </h5>
                         </div>
                     </div>
+                </div>
             </div>
-            </div>
-
 
         )
     }

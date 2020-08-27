@@ -3,7 +3,6 @@
  * information from the server.
  */
 
-
 /**
  * This function makes a fetch request to the backend API. This fetch request retrieves all
  * Accounts from the server.
@@ -11,7 +10,7 @@
  * @return a promise containing the requested information from the server.
  */
 export const findAllAccounts = () => {
-    return  fetch(`http://localhost:8080/api/accounts`)
+    return fetch(`http://localhost:8080/api/accounts`)
         .then(response => response.json())
 };
 

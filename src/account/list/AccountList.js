@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import AccountServices from "../../service/AccountServices";
 import "./AccountList.css"
 
-
 /**
  * This class represents a List of all Accounts contained in the server. It displays all the
  * Accounts by identification number and provides a Link to the Account's profile by clicking on
@@ -28,14 +27,14 @@ export default class AccountList extends React.Component {
      * Accounts from the server.
      */
     componentDidMount() {
-            AccountServices.findAllAccounts()
+        AccountServices.findAllAccounts()
             .then(results => this.setState({
                                                accountList: results
                                            }))
     }
 
     render() {
-        return(
+        return (
             <div className="container">
                 <div className="row">
                     <Link to={"/"} className="customer-button-account btn">
@@ -63,21 +62,21 @@ export default class AccountList extends React.Component {
                         {this.state.accountList &&
                          this.state.accountList.length > 0 &&
                          this.state.accountList.map(account =>
-                                                         <tr key={account.id}>
-                                                             <td className="table-column">
-                                                                 <Link to={`/account/${account.id}`}
-                                                                       className="table-link btn">
-                                                                     {account.address}, {account.city} {account.state}
-                                                                 </Link>
-                                                             </td>
-                                                             <td className="table-column">
-                                                                 <Link to={`/account/${account.id}`}
-                                                                       className="table-link btn">
-                                                                        {account.id}
-                                                                 </Link>
-                                                             </td>
+                                                        <tr key={account.id}>
+                                                            <td className="table-column">
+                                                                <Link to={`/account/${account.id}`}
+                                                                      className="table-link btn">
+                                                                    {account.address}, {account.city} {account.state}
+                                                                </Link>
+                                                            </td>
+                                                            <td className="table-column">
+                                                                <Link to={`/account/${account.id}`}
+                                                                      className="table-link btn">
+                                                                    {account.id}
+                                                                </Link>
+                                                            </td>
 
-                                                         </tr>
+                                                        </tr>
                          )
 
                         }
