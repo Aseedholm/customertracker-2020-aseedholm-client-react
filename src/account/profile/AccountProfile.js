@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import AccountServices from "../../service/AccountServices";
 import "./AccountProfile.css"
+import CustomerServices from "../../service/CustomerServices";
 
 /**
  * This class represents a Account's profile according to data retrieved from the server. This
@@ -33,10 +34,21 @@ export default class AccountProfile extends React.Component {
 
         AccountServices.findAccountById(accountId)
             .then(results => this.setState({
-                                               account: results,
-                                               customer: results.customer
+                                               account: results
                                            }))
+            .then(results => CustomerServices.findCustomerById(this.state.account.customer_id)
+                .then(results => this.setState({
+                                            customer: results
+                                               })))
+
     }
+
+    getCustomerInformation(customerId) {
+        CustomerServices.findCustomerById(customerId)
+            .then(results => this.setState({
+                                                customer: results
+                                           }))
+}
 
     render() {
         return (
@@ -69,9 +81,9 @@ export default class AccountProfile extends React.Component {
                             <h5>
                                 <Link to={`/customer/profile/${this.state.customer.id}`}
                                       className="customer-name-text">
-                                    Customer Name: {this.state.customer.firstName
-                                                    && this.state.customer.firstName} {this.state.customer.lastName
-                                                                                       && this.state.customer.lastName}
+                                    Customer Name: {this.state.customer.first_name
+                                                    && this.state.customer.first_name} {this.state.customer.last_name
+                                                                                       && this.state.customer.last_name}
                                 </Link>
                             </h5>
                         </div>
@@ -96,26 +108,26 @@ export default class AccountProfile extends React.Component {
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Zip Code: {this.state.account.zipCode && this.state.account.zipCode}
+                                Zip Code: {this.state.account.zip_code && this.state.account.zip_code}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Solar Farm Identification Number: {this.state.account.solarFarmId
-                                                                   &&  this.state.account.solarFarmId}
+                                Solar Farm Identification Number: {this.state.account.solar_farm_id
+                                                                   &&  this.state.account.solar_farm_id}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Capacity Share Amount: {this.state.account.capacityShare && this.state.account.capacityShare}
+                                Capacity Share Amount: {this.state.account.capacity_share && this.state.account.capacity_share}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Account creation date: {this.state.account.createdDate && this.state.account.createdDate}
+                                Account creation date: {this.state.account.created_date && this.state.account.created_date}
                             </h5>
                         </div>
                     </div>

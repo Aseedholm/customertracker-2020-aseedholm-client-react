@@ -66,14 +66,14 @@ export default class CustomerList extends React.Component {
                                                                  <Link
                                                                      to={`/customer/profile/${customer.id}`}
                                                                      className="table-link btn">
-                                                                     {customer.firstName} {customer.lastName}
+                                                                     {customer.first_name && customer.first_name} {customer.last_name && customer.last_name}
                                                                  </Link>
                                                              </td>
                                                              <td className="table-column">
                                                                  <Link
                                                                      to={`/customer/profile/${customer.id}`}
                                                                      className="table-link btn">
-                                                                     {customer.id}
+                                                                     {customer.id && customer.id}
                                                                  </Link>
                                                              </td>
                                                          </tr>

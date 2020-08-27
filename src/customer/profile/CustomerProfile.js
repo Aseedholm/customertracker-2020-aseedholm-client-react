@@ -72,12 +72,11 @@ export default class CustomerProfile extends React.Component {
                         <div className="row">
                             <div className="col-12 customer-text">
                                 <h5>
-                                    Name: {this.state.customer.firstName &&
-                                           this.state.customer.firstName
+                                    Name: {this.state.customer.first_name &&
+                                           this.state.customer.first_name
+                                } {this.state.customer.last_name &&
+                                   this.state.customer.last_name
                                 }
-                                    {this.state.customer.lastName &&
-                                     this.state.customer.lastName
-                                    }
                                 </h5>
                             </div>
 
@@ -91,14 +90,16 @@ export default class CustomerProfile extends React.Component {
 
                             <div className="col-12 customer-text">
                                 <h5>
-                                    Date joined: {this.state.customer.date && this.state.customer.date}
+                                    Date joined: {this.state.customer.date
+                                                  && this.state.customer.date}
                                 </h5>
                             </div>
 
 
                             <div className="col-12 customer-text">
                                 <h5>
-                                    Reason for joining: {this.state.customer.reasonForJoining && this.state.customer.reasonForJoining}
+                                    Reason for joining: {this.state.customer.reason_for_joining
+                                                         && this.state.customer.reason_for_joining}
                                 </h5>
                             </div>
 
@@ -122,15 +123,12 @@ export default class CustomerProfile extends React.Component {
                         {this.state.accounts.length > 0 &&
                          <div className="col-12 customer-text">
 
-                             <h5>
-                                 Account List
-                             </h5>
                              <table className={"table"}>
                                  <thead>
                                  <tr>
                                      <th>
                                          <h5>
-                                             Account Identification Numbers
+                                             Associated Accounts
                                          </h5>
                                      </th>
                                  </tr>
@@ -145,7 +143,8 @@ export default class CustomerProfile extends React.Component {
                                                                           <Link
                                                                               to={`/account/${account.id}`}
                                                                               className="customer-text account-text">
-                                                                              {account.id}
+                                                                              {account.id
+                                                                               && account.id}
                                                                           </Link>
                                                                       </h5>
                                                                   </td>
