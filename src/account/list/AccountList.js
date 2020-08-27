@@ -50,10 +50,19 @@ export default class AccountList extends React.Component {
                         <thead>
                         <tr>
                             <th>
-                                Address
+                                <h4>
+                                    Address
+                                </h4>
                             </th>
                             <th>
-                                Identification Number
+                                <h4>
+                                    Identification Number
+                                </h4>
+                            </th>
+                            <th>
+                                <h4>
+                                    Owner ID Number
+                                </h4>
                             </th>
 
                         </tr>
@@ -66,13 +75,20 @@ export default class AccountList extends React.Component {
                                                             <td className="table-column">
                                                                 <Link to={`/account/${account.id}`}
                                                                       className="table-link btn">
-                                                                    {account.address}, {account.city} {account.state}
+                                                                    {account.address && account.address}, {account.city && account.city} {account.state && account.state}
                                                                 </Link>
                                                             </td>
                                                             <td className="table-column">
+
                                                                 <Link to={`/account/${account.id}`}
                                                                       className="table-link btn">
-                                                                    {account.id}
+                                                                    {account.id && account.id}
+                                                                </Link>
+                                                            </td>
+                                                            <td className="table-column">
+                                                                <Link to={`/customer/profile/${account.customer_id}`}
+                                                                      className="table-link btn">
+                                                                    {account.customer_id && account.customer_id}
                                                                 </Link>
                                                             </td>
 

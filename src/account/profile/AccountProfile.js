@@ -43,13 +43,6 @@ export default class AccountProfile extends React.Component {
 
     }
 
-    getCustomerInformation(customerId) {
-        CustomerServices.findCustomerById(customerId)
-            .then(results => this.setState({
-                                                customer: results
-                                           }))
-}
-
     render() {
         return (
             <div>
@@ -57,6 +50,10 @@ export default class AccountProfile extends React.Component {
                     <Link to={"/accounts"}
                           className="account-button btn btn-sm">
                         Accounts
+                    </Link>
+                    <Link to={"/"}
+                          className="account-button btn btn-sm">
+                        Customers
                     </Link>
                 </div>
 
