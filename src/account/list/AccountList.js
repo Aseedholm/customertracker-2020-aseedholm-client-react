@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import AccountServices from "../../service/AccountServices";
+import "./AccountList.css"
 
 
 /**
@@ -35,39 +36,54 @@ export default class AccountList extends React.Component {
 
     render() {
         return(
-            <div className="account-list body">
-                <h1>
-                    Account List
-                </h1>
-                <h5>
-                    <Link to={"/"}>
-                        List of all Customers
+            <div className="container">
+                <div className="row">
+                    <Link to={"/"} className="customer-button-account btn">
+                        Customers
                     </Link>
-                </h5>
-                <table className={"table"}>
-                    <thead>
-                    <tr>
-                        <th>
-                            Account Information
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {this.state.accountList &&
-                     this.state.accountList.length > 0 &&
-                     this.state.accountList.map(account =>
-                                                     <tr key={account.id}>
-                                                         <td>
-                                                             <Link to={`/account/${account.id}`}>
-                                                                 Account Identification Number: {account.id}
-                                                             </Link>
-                                                         </td>
-                                                     </tr>
-                     )
+                </div>
 
-                    }
-                    </tbody>
-                </table>
+                <div className="account-list">
+                    <h1 className="customer-list-header">
+                        Accounts
+                    </h1>
+                    <table className={"table table-bordered table-striped"}>
+                        <thead>
+                        <tr>
+                            <th>
+                                Address
+                            </th>
+                            <th>
+                                Identification Number
+                            </th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {this.state.accountList &&
+                         this.state.accountList.length > 0 &&
+                         this.state.accountList.map(account =>
+                                                         <tr key={account.id}>
+                                                             <td className="table-column">
+                                                                 <Link to={`/account/${account.id}`}
+                                                                       className="table-link btn">
+                                                                     {account.address}, {account.city} {account.state}
+                                                                 </Link>
+                                                             </td>
+                                                             <td className="table-column">
+                                                                 <Link to={`/account/${account.id}`}
+                                                                       className="table-link btn">
+                                                                        {account.id}
+                                                                 </Link>
+                                                             </td>
+
+                                                         </tr>
+                         )
+
+                        }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }

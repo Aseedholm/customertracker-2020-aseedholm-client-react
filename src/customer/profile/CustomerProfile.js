@@ -39,7 +39,6 @@ export default class CustomerProfile extends React.Component {
                                                customer: results
                                            }));
 
-
         /*Fetch the customer's accounts if the customer has accounts.*/
         AccountServices.findAccountsByCustomerId(customerId)
             .then(results => this.setState({
@@ -49,73 +48,118 @@ export default class CustomerProfile extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="float-left">
-                    {/*Link for routing.*/}
-                    <Link to={"/"}>
-                        To all Customers
+            <div className=" container">
+                <div className="row customer-button-column">
+                    <Link to={"/"} className="customer-button btn btn-sm">{/*col-3*/}
+                        Customers
                     </Link>
                 </div>
-                <h5>
-                    First Name: {this.state.customer.firstName}
-                </h5>
-                <h5>
-                    Last Name: {this.state.customer.lastName}
-                </h5>
-                <h5>
-                    Date joined: {this.state.customer.date}
-                </h5>
-                <h5>
-                    Reason for joining: {this.state.customer.reasonForJoining}
-                </h5>
 
-                <h5>
-                    Email: {this.state.customer.email}
-                </h5>
-                <h5>
-                    {this.state.active &&
-                     <span>
-                        Account is: Active
-                     </span>
-                    }
-                    {!this.state.active &&
-                     <span>
-                        Account is: Inactive
-                     </span>
-                    }
-                </h5>
-                {this.state.accounts.length > 0 &&
-                 <div className="customer-list body">
-                     <h5>
-                         Account List
-                     </h5>
-                     <table className={"table"}>
-                         <thead>
-                         <tr>
-                             <th>
-                                 Account Identification Numbers
-                             </th>
-                         </tr>
-                         </thead>
-                         <tbody>
-                         {this.state.accounts &&
-                          this.state.accounts.length > 0 &&
-                          this.state.accounts.map(account =>
-                                                      <tr key={account.id}>
-                                                          <td>
-                                                              <Link to={`/account/${account.id}`}>
-                                                                  {account.id}
-                                                              </Link>
-                                                          </td>
-                                                      </tr>
-                          )
+                <div className="row-cols-12 customer-profile">
 
-                         }
-                         </tbody>
-                     </table>
-                 </div>
-                }
+                    <div className="profile-top-banner row">
+                        <div className="col-12 customer-text">
+                            <h1>
+                                Customer Profile
+                            </h1>
+                        </div>
+                    </div>
 
+
+                    <div className="profile-body row-cols-12">
+
+
+                        <div className="row">
+                            <div className="col-12 customer-text">
+                                <h5>
+                                    Name: {this.state.customer.firstName &&
+                                           this.state.customer.firstName
+                                }
+                                    {this.state.customer.lastName &&
+                                     this.state.customer.lastName
+                                    }
+                                </h5>
+                            </div>
+
+
+                            <div className="col-12 customer-text">
+                                <h5>
+                                    Email: {this.state.customer.email}
+                                </h5>
+                            </div>
+
+
+                            <div className="col-12 customer-text">
+                                <h5>
+                                    Date joined: {this.state.customer.date}
+                                </h5>
+                            </div>
+
+
+                            <div className="col-12 customer-text">
+                                <h5>
+                                    Reason for joining: {this.state.customer.reasonForJoining}
+                                </h5>
+                            </div>
+
+
+                            <div className="col-12 customer-text">
+                                <h5 className="">
+                                    {this.state.active &&
+                                     <span>
+                                        Account is: Active
+                                     </span>
+                                    }
+                                    {!this.state.active &&
+                                     <span>
+                                        Account is: Inactive
+                                    </span>
+                                    }
+                                </h5>
+                            </div>
+                        </div>
+
+                        {this.state.accounts.length > 0 &&
+                         <div className="col-12 customer-text">
+
+                             <h5>
+                                 Account List
+                             </h5>
+                             <table className={"table"}>
+                                 <thead>
+                                 <tr>
+                                     <th>
+                                         <h5>
+                                             Account Identification Numbers
+                                         </h5>
+                                     </th>
+                                 </tr>
+                                 </thead>
+                                 <tbody>
+                                 {this.state.accounts &&
+                                  this.state.accounts.length > 0 &&
+                                  this.state.accounts.map(account =>
+                                                              <tr key={account.id}>
+                                                                  <td>
+                                                                      <h5>
+                                                                          <Link
+                                                                              to={`/account/${account.id}`}
+                                                                              className="customer-text account-text">
+                                                                              {account.id}
+                                                                          </Link>
+                                                                      </h5>
+                                                                  </td>
+                                                              </tr>
+                                  )
+
+                                 }
+                                 </tbody>
+                             </table>
+                         </div>
+                        }
+                    </div>
+                    {/*end profile-body*/}
+                </div>
             </div>
         ) //end Return
     } //end Render
