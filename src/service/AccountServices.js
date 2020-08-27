@@ -27,6 +27,13 @@ export const findAccountById = (accountId) => {
         .then(response => response.json())
 };
 
+/**
+ * This function makes a fetch request to the backend API. This fetch request retrieves a
+ * all accounts for a Customer according to the Customer's identification number.
+ *
+ * @param customerId a integer number representing the customer's identification number.
+ * @return a promise containing the requested information from the server.
+ */
 export const findAccountsByCustomerId = (customerId) => {
     return fetch(`http://localhost:8080/api/accounts/customer/${customerId}`)
         .then(response => response.json())

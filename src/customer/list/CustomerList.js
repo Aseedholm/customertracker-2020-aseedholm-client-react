@@ -33,41 +33,51 @@ export default class CustomerList extends React.Component {
     }
     render() {
         return (
-        <div className="customer-list body">
-            <h1>
-                Customer List
-            </h1>
-            <h5>
-                {/*Link for routing.*/}
-                <Link to={"/accounts"}>
-                    List of all Accounts
-                </Link>
-            </h5>
-            <table className={"table"}>
-                <thead>
-                    <tr>
-                        <th>
-                            Customer Name
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                {/*{this.state.customerList.sort((a, b) => (a.lastName > b.lastName) ? 1: -1)}*/}
-                    {this.state.customerList &&
-                     this.state.customerList.length > 0 &&
-                     this.state.customerList.map(customer =>
-                     <tr key={customer.id}>
-                         <td>
-                             <Link to={`/customer/profile/${customer.id}`}>
-                                 {customer.firstName} {customer.lastName}
-                             </Link>
-                         </td>
-                     </tr>
-                     )
+        <div>
+            {/*Link for routing.*/}
+            <div className="row">
+            <Link to={"/accounts"} className="account-button btn">
+                Accounts
+            </Link>
+            </div>
+            <div className="customer-list">
+                <h1 className="customer-list-header">
+                    Customers
+                </h1>
+                <table className="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Identification Number
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.customerList &&
+                         this.state.customerList.length > 0 &&
+                         this.state.customerList.map(customer =>
+                         <tr key={customer.id}>
+                             <td className="table-column">
 
-                    }
-                </tbody>
-            </table>
+                                 <Link to={`/customer/profile/${customer.id}`} className="table-link btn">
+                                     {customer.firstName} {customer.lastName}
+                                 </Link>
+                             </td>
+                             <td className="table-column">
+                                 <Link to={`/customer/profile/${customer.id}`} className="table-link btn">
+                                     {customer.id}
+                                 </Link>
+                             </td>
+                         </tr>
+                         )
+
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
         )
     }

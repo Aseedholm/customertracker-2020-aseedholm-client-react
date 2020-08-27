@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d60321-5c14-4bee-bdea-f774dad9987c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/service/AccountServices.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CustomerServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/account/list/AccountList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/account/profile/AccountProfile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/account/list/AccountList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/list/AccountList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/list/CustomerList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/customer/list/CustomerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/RouterManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/RouterManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AccountServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountServices.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -36,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WeatherCheck/weather-checker" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,7 +74,7 @@
       <updated>1598396047838</updated>
       <workItem from="1598396049095" duration="11117000" />
       <workItem from="1598412627567" duration="98000" />
-      <workItem from="1598452686475" duration="8569000" />
+      <workItem from="1598452686475" duration="25525000" />
     </task>
     <servers />
   </component>

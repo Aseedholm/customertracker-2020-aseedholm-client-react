@@ -1,15 +1,15 @@
-.table-link {
-    color: black;
-    text-decoration: underline;
-}
-
-.account-button {
+.customer-button-account {
     background-color: lightsteelblue;
     text-decoration: underline;
     float: left;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 15px;
+}
+
+.table-link {
+    color: black;
+    text-decoration: underline;
 }
 
 /*Found on
@@ -19,7 +19,6 @@ https://stackoverflow.com/questions/20825211/bootstrap-table-striped-how-do-i-ch
     background-color: darkgrey;
 }
 
-.customer-list {
+.account-list {
     background-color: grey;
 }
-
