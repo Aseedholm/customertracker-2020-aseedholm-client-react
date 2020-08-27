@@ -22,3 +22,8 @@ https://stackoverflow.com/questions/20825211/bootstrap-table-striped-how-do-i-ch
 .account-list {
     background-color: grey;
 }
+
+.tip-text-account-list {
+    color: whitesmoke;
+    margin-left: 18px;
+}

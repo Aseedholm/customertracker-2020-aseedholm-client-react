@@ -36,3 +36,8 @@
     color: black;
     text-decoration: underline;
 }
+
+.tip-text-customer {
+    color: whitesmoke;
+    margin-left: 18px;
+}

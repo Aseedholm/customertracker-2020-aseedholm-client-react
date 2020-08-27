@@ -35,6 +35,18 @@ export default class CustomerList extends React.Component {
     render() {
         return (
             <div>
+                <div className="row">
+                    <h6 className="">
+                        <details>
+                            <summary className="tip-text-customer-list">
+                                Tip:
+                            </summary>
+                            <h6 className="tip-text-customer-list">
+                                Click on the customer's name or identification number to go to their profile.
+                            </h6>
+                        </details>
+                    </h6>
+                </div>
                 {/*Link for routing.*/}
                 <div className="row">
                     <Link to={"/accounts"} className="account-button btn">

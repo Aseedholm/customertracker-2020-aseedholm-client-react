@@ -46,6 +46,18 @@ export default class AccountProfile extends React.Component {
     render() {
         return (
             <div>
+                <div className="row">
+                    <h6 className="account-class-text">
+                        <details>
+                            <summary className="tip-text">
+                                Tip:
+                            </summary>
+                            <h6 className="tip-text">
+                                Click on Customer's name to navigate to customer's profile.
+                            </h6>
+                        </details>
+                    </h6>
+                </div>
                 <div className="row account-button-column">
                     <Link to={"/accounts"}
                           className="account-button btn btn-sm">
@@ -64,6 +76,7 @@ export default class AccountProfile extends React.Component {
                                 Account Profile
                             </h1>
                         </div>
+
                     </div>
 
                     <div className="account-profile-body row-cols-12">

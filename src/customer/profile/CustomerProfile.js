@@ -49,6 +49,18 @@ export default class CustomerProfile extends React.Component {
     render() {
         return (
             <div className=" container">
+                <div className="row">
+                    <h6 className="customer-text">
+                        <details>
+                            <summary className="tip-text-customer">
+                                Tip:
+                            </summary>
+                            <h6 className="tip-text-customer">
+                                Click on the account identification number to go to that account's profile.
+                            </h6>
+                        </details>
+                    </h6>
+                </div>
                 <div className="row customer-button-column">
                     <Link to={"/"} className="customer-button btn btn-sm">{/*col-3*/}
                         Customers
