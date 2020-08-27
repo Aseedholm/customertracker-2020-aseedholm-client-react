@@ -23,3 +23,7 @@ https://stackoverflow.com/questions/20825211/bootstrap-table-striped-how-do-i-ch
     background-color: grey;
 }
 
+.tip-text-customer-list {
+    color: whitesmoke;
+    margin-left: 18px;
+}

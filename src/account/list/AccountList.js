@@ -37,6 +37,18 @@ export default class AccountList extends React.Component {
         return (
             <div className="container">
                 <div className="row">
+                    <h6 className="">
+                        <details>
+                            <summary className="tip-text-account-list">
+                                Tip:
+                            </summary>
+                            <h6 className="tip-text-account-list">
+                                Click on the address or identification number to go to the account profile. Click on the customer's identification number to go to the customer's profile.
+                            </h6>
+                        </details>
+                    </h6>
+                </div>
+                <div className="row">
                     <Link to={"/"} className="customer-button-account btn">
                         Customers
                     </Link>
@@ -61,7 +73,7 @@ export default class AccountList extends React.Component {
                             </th>
                             <th>
                                 <h4>
-                                    Owner ID Number
+                                    Customer ID Number
                                 </h4>
                             </th>
 
