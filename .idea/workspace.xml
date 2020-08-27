@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f9d60321-5c14-4bee-bdea-f774dad9987c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/account/list/AccountList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/list/AccountList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/profile/AccountProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/customer/list/CustomerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/list/CustomerList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/RouterManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/RouterManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AccountServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CustomerServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CustomerServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer/profile/CustomerProfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +67,7 @@
       <workItem from="1598396049095" duration="11117000" />
       <workItem from="1598412627567" duration="98000" />
       <workItem from="1598452686475" duration="26222000" />
-      <workItem from="1598495912244" duration="313000" />
+      <workItem from="1598495912244" duration="1264000" />
     </task>
     <servers />
   </component>

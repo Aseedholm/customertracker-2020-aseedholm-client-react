@@ -78,43 +78,44 @@ export default class AccountProfile extends React.Component {
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Address: {this.state.account.address}
+                                Address: {this.state.account.address && this.state.account.address}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                City: {this.state.account.city}
+                                City: {this.state.account.city && this.state.account.city}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                State: {this.state.account.state}
+                                State: {this.state.account.state && this.state.account.state}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Zip Code: {this.state.account.zipCode}
+                                Zip Code: {this.state.account.zipCode && this.state.account.zipCode}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Solar Farm Identification Number: {this.state.account.solarFarmId}
+                                Solar Farm Identification Number: {this.state.account.solarFarmId
+                                                                   &&  this.state.account.solarFarmId}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Capacity Share Amount: {this.state.account.capacityShare}
+                                Capacity Share Amount: {this.state.account.capacityShare && this.state.account.capacityShare}
                             </h5>
                         </div>
 
                         <div className="col-12 account-class-text">
                             <h5>
-                                Account creation date: {this.state.account.createdDate}
+                                Account creation date: {this.state.account.createdDate && this.state.account.createdDate}
                             </h5>
                         </div>
                     </div>

@@ -84,21 +84,21 @@ export default class CustomerProfile extends React.Component {
 
                             <div className="col-12 customer-text">
                                 <h5>
-                                    Email: {this.state.customer.email}
+                                    Email: {this.state.customer.email && this.state.customer.email}
                                 </h5>
                             </div>
 
 
                             <div className="col-12 customer-text">
                                 <h5>
-                                    Date joined: {this.state.customer.date}
+                                    Date joined: {this.state.customer.date && this.state.customer.date}
                                 </h5>
                             </div>
 
 
                             <div className="col-12 customer-text">
                                 <h5>
-                                    Reason for joining: {this.state.customer.reasonForJoining}
+                                    Reason for joining: {this.state.customer.reasonForJoining && this.state.customer.reasonForJoining}
                                 </h5>
                             </div>
 
